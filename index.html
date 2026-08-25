@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hamza Omar — AI-Assisted Product Builder and Computer Science Student. Portfolio featuring Pixel Guardian, Dubora, and TravelOS." />
+  <meta name="theme-color" content="#0a0d12" />
+  <meta property="og:title" content="Hamza Omar | Product Builder" />
+  <meta property="og:description" content="AI-Assisted Product Builder and Computer Science Student. Explore my software projects and development workflow." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hamzaomar-dev.github.io/" />
+  <title>Hamza Omar | AI-Assisted Product Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Hamza Omar home">HO<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#workflow">How I Build</a>
+        <a href="#tech">Technologies</a>
+        <a href="#opportunities">Opportunities</a>
+        <a class="nav-github" href="https://github.com/hamzaomar-dev" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">AI-Assisted Product Builder · Computer Science Student</p>
+        <h1>Hi, I'm <span>Hamza Omar.</span></h1>
+        <p class="hero-text">I build software products using an <strong>AI-first development workflow</strong>, turning ideas into structured requirements, working features, and testable applications.</p>
+        <p class="hero-text secondary">Instead of treating AI as a one-click solution, I break projects into stages, define what each feature should do, use AI to accelerate implementation, and test and iterate on each stage before moving forward.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">View Projects</a>
+          <a class="button secondary-button" href="https://github.com/hamzaomar-dev" target="_blank" rel="noreferrer">GitHub Profile ↗</a>
+        </div>
+        <div class="hero-meta">
+          <span>📍 Amman, Jordan</span>
+          <span>🎓 Computer Science Student</span>
+        </div>
+      </div>
+
+      <aside class="hero-card reveal" aria-label="Development workflow summary">
+        <div class="profile-ring">
+          <img src="https://github.com/hamzaomar-dev.png" alt="Hamza Omar GitHub profile" />
+        </div>
+        <div class="status-line"><span class="status-dot"></span> Building practical software products</div>
+        <div class="mini-workflow">
+          <span>Idea</span><b>→</b><span>Requirements</span><b>→</b><span>Build</span><b>→</b><span>Test</span><b>→</b><span>Iterate</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section container" id="projects">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Selected Work</p>
+        <h2>Projects</h2>
+        <p>Software products built feature-by-feature with testing and iteration throughout development.</p>
+      </div>
+
+      <article class="project project-featured reveal">
+        <div class="project-media">
+          <img src="https://raw.githubusercontent.com/hamzaomar-dev/Pixel-Guardian/main/screenshots/01-dashboard.png" alt="Pixel Guardian dashboard" loading="lazy" />
+        </div>
+        <div class="project-content">
+          <div class="project-topline">
+            <span class="project-number">01</span>
+            <span class="release-badge">Released · v1.0.0</span>
+          </div>
+          <h3>Pixel Guardian</h3>
+          <p class="project-summary">Windows PC monitoring, maintenance, and gaming utility.</p>
+          <p>Pixel Guardian combines hardware inspection, live system monitoring, disk-health information, driver review, safe temporary-file cleanup, and gaming-performance tools in one Windows desktop application.</p>
+          <ul class="feature-list">
+            <li>Real-time CPU, RAM, disk, network, and process monitoring</li>
+            <li>Hardware, BIOS, motherboard, GPU, and storage information</li>
+            <li>Driver and device inspection</li>
+            <li>Safe cleaner with administrator-aware operations</li>
+            <li>Steam / Epic game detection and gaming readiness tools</li>
+            <li>Arabic / English interface support</li>
+          </ul>
+          <div class="tags">
+            <span>Python</span><span>PySide6</span><span>psutil</span><span>Windows APIs</span><span>PyInstaller</span><span>Inno Setup</span>
+          </div>
+          <div class="project-actions">
+            <a class="button primary" href="https://github.com/hamzaomar-dev/Pixel-Guardian" target="_blank" rel="noreferrer">View Repository ↗</a>
+            <a class="button secondary-button" href="https://github.com/hamzaomar-dev/Pixel-Guardian/releases/tag/v1.0.0" target="_blank" rel="noreferrer">Download Release ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project project-featured reverse reveal">
+        <div class="project-media">
+          <img src="https://raw.githubusercontent.com/hamzaomar-dev/Dubora/main/assets/screenshots/dubora-main.png" alt="Dubora main interface" loading="lazy" />
+        </div>
+        <div class="project-content">
+          <div class="project-topline">
+            <span class="project-number">02</span>
+            <span class="release-badge">Released · v1.0.0</span>
+          </div>
+          <h3>Dubora</h3>
+          <p class="project-summary">AI-powered Windows video translation workflow for Arabic subtitles.</p>
+          <p>Dubora automates video translation through audio extraction, speech transcription, contextual Arabic translation, subtitle validation, and final video rendering while keeping subtitle timing under application control.</p>
+          <ul class="feature-list">
+            <li>AI speech transcription and contextual Arabic translation</li>
+            <li>Preserved subtitle timestamps</li>
+            <li>FFmpeg-based audio extraction and rendering</li>
+            <li>Chunked processing for longer videos</li>
+            <li>Retry, resume, cancellation, and progress handling</li>
+            <li>Separate FastAPI AI gateway</li>
+          </ul>
+          <div class="tags">
+            <span>Python</span><span>PyWebView</span><span>FastAPI</span><span>FFmpeg</span><span>REST APIs</span><span>Groq</span><span>PyInstaller</span>
+          </div>
+          <div class="project-actions">
+            <a class="button primary" href="https://github.com/hamzaomar-dev/Dubora" target="_blank" rel="noreferrer">View Repository ↗</a>
+            <a class="button secondary-button" href="https://github.com/hamzaomar-dev/Dubora/releases/tag/v1.0.0" target="_blank" rel="noreferrer">Download Release ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project project-compact reveal">
+        <div class="travel-visual" aria-hidden="true">
+          <span>✈</span>
+          <div class="route-line"></div>
+        </div>
+        <div class="project-content">
+          <div class="project-topline">
+            <span class="project-number">03</span>
+            <span class="development-badge">In Development</span>
+          </div>
+          <h3>TravelOS</h3>
+          <p class="project-summary">Travel-focused software platform.</p>
+          <p>The project is being built feature-by-feature using an AI-assisted development workflow, with testing and iteration at each stage.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section workflow-section" id="workflow">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Process</p>
+          <h2>How I Build</h2>
+          <p>My workflow focuses on turning an idea into a working product through clear stages.</p>
+        </div>
+        <div class="workflow-grid reveal">
+          <div class="workflow-step"><span>01</span><h3>Idea</h3><p>Start with a product concept and define the goal.</p></div>
+          <div class="workflow-step"><span>02</span><h3>Requirements</h3><p>Break the idea into clear features and expected behavior.</p></div>
+          <div class="workflow-step"><span>03</span><h3>Tech Stack</h3><p>Select the tools needed for the product.</p></div>
+          <div class="workflow-step"><span>04</span><h3>Development Stages</h3><p>Split implementation into manageable stages.</p></div>
+          <div class="workflow-step"><span>05</span><h3>AI-Assisted Implementation</h3><p>Use AI as a development collaborator to accelerate implementation.</p></div>
+          <div class="workflow-step"><span>06</span><h3>Testing</h3><p>Test each stage before continuing development.</p></div>
+          <div class="workflow-step"><span>07</span><h3>Iteration</h3><p>Fix errors and unexpected behavior until features work correctly.</p></div>
+          <div class="workflow-step"><span>08</span><h3>Working Product</h3><p>Bring the completed stages together into a usable product.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="tech">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Stack</p>
+        <h2>Technologies I've Worked With</h2>
+      </div>
+      <div class="tech-grid reveal">
+        <div class="tech-card">
+          <h3>Languages & Development</h3>
+          <div class="tags large"><span>Python</span><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+        </div>
+        <div class="tech-card">
+          <h3>Desktop / Backend / Data</h3>
+          <div class="tags large"><span>PySide6</span><span>PyWebView</span><span>FastAPI</span><span>Supabase</span><span>PostgreSQL</span><span>REST APIs</span></div>
+        </div>
+        <div class="tech-card">
+          <h3>Tools</h3>
+          <div class="tags large"><span>Git</span><span>GitHub</span><span>ChatGPT</span><span>FFmpeg</span><span>PyInstaller</span><span>Inno Setup</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="opportunities">
+      <div class="opportunity-card reveal">
+        <div>
+          <p class="eyebrow">What I'm Looking For</p>
+          <h2>Build. Test. Iterate. Ship.</h2>
+          <p>I'm interested in opportunities involving AI-Assisted Product Development, MVP Building, AI-Native Development, Rapid Prototyping, Junior Product Development, and Remote / Flexible Software Projects.</p>
+          <p>I'm especially interested in teams that care about <strong>building, testing, iterating, and shipping useful products.</strong></p>
+        </div>
+        <div class="opportunity-actions">
+          <a class="button primary" href="https://github.com/hamzaomar-dev" target="_blank" rel="noreferrer">Explore My GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Hamza Omar</p>
+      <a href="https://github.com/hamzaomar-dev" target="_blank" rel="noreferrer">github.com/hamzaomar-dev ↗</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
