@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>World Cup AI Tip Prompt Builder</title>
+<style>
+:root{--bg:#0b1220;--card:#111b2e;--line:#23314d;--text:#f4f7fb;--muted:#a8b3c7;--accent:#3ddc97}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(135deg,#08111f,#0f1b2f);color:var(--text);min-height:100vh;display:grid;place-items:center;padding:24px}.wrap{width:min(760px,100%)}h1{font-size:clamp(28px,5vw,44px);margin:0 0 8px}.sub{color:var(--muted);margin:0 0 24px}.card{background:rgba(17,27,46,.95);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,.28)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:7px}.full{grid-column:1/-1}label{font-size:13px;color:var(--muted)}input,select,textarea{width:100%;border:1px solid var(--line);background:#0b1425;color:var(--text);border-radius:10px;padding:12px;font:inherit}textarea{min-height:130px;resize:vertical}button{margin-top:14px;width:100%;border:0;border-radius:12px;padding:13px 16px;background:var(--accent);color:#062014;font-weight:800;font-size:15px;cursor:pointer}.out{margin-top:16px;padding:16px;border:1px dashed #36506f;border-radius:12px;background:#0a1322;white-space:pre-wrap;line-height:1.5}.tag{display:inline-block;background:#15302a;color:#7df0bd;border:1px solid #285a4b;border-radius:999px;padding:5px 9px;font-size:12px;margin-bottom:12px}@media(max-width:640px){.grid{grid-template-columns:1fr}.full{grid-column:auto}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <span class="tag">tipmaster.de • World Cup concept</span>
+  <h1>AI Match Tip Prompt Builder</h1>
+  <p class="sub">Create a clean prompt for an AI assistant to analyze a World Cup match before you make a prediction.</p>
+  <section class="card">
+    <div class="grid">
+      <div class="field"><label>Team A</label><input id="a" placeholder="Germany" /></div>
+      <div class="field"><label>Team B</label><input id="b" placeholder="Argentina" /></div>
+      <div class="field"><label>Your initial pick</label><select id="pick"><option>Team A wins</option><option>Draw</option><option>Team B wins</option></select></div>
+      <div class="field"><label>Risk level</label><select id="risk"><option>Low</option><option selected>Medium</option><option>High</option></select></div>
+      <div class="field full"><label>Extra context (optional)</label><input id="ctx" placeholder="Injuries, recent form, group-stage situation..." /></div>
+    </div>
+    <button onclick="buildPrompt()">Generate AI analysis prompt</button>
+    <div id="out" class="out">Your prompt will appear here.</div>
+  </section>
+</main>
+<script>
+function buildPrompt(){
+ const a=document.getElementById('a').value.trim()||'Team A';
+ const b=document.getElementById('b').value.trim()||'Team B';
+ const pick=document.getElementById('pick').value;
+ const risk=document.getElementById('risk').value;
+ const ctx=document.getElementById('ctx').value.trim();
+ const prompt=`Analyze the World Cup match ${a} vs ${b}. My initial pick is: ${pick}. Risk level: ${risk}. ${ctx?`Extra context: ${ctx}. `:''}Check recent form, squad availability, likely tactical matchup, and any important context. Then give: 1) the strongest argument for my pick, 2) the strongest argument against it, 3) a confidence score from 0-100, and 4) one safer alternative prediction. Keep it concise and clearly separate facts from assumptions.`;
+ document.getElementById('out').textContent=prompt;
+}
+</script>
+</body>
+</html>
